@@ -41,12 +41,28 @@
 };
 
 / {
+    macros {
+        new_macro1: new_macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Y &kp A &kp M &kp A &kp S &kp H &kp I &kp T &kp A &kp S &kp E &kp I &kp I &kp C &kp H &kp I &kp AT &kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp DOT &kp J &kp P>;
+            label = "NEW_MACRO1";
+        };
+
+        new_macro2: new_macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp A &kp K &kp U &kp C &kp H &kp U &kp M &kp U &kp C &kp H &kp U &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "NEW_MACRO2";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp I  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp JP_AT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp JP_SEMI  &kp JP_COLON  &kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LSHFT  &kp RIGHT_SHIFT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp JP_SLASH  &kp JP_BSLH  &kp LC(UP_ARROW)  &kp LS(NUMBER_2)  &kp F7  &kp F10  &kp BSPC  &kp ENTER  &kp JP_CARET  &kp CAPS  &tog 2  &kp ENTER  &kp LGUI  &kp RGUI  &kp ENTER  &tog 2  &kp LG(C)  &kp LG(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp I  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &new_macro1  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp JP_SEMI  &new_macro2  &kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LSHFT  &kp RIGHT_SHIFT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp JP_SLASH  &kp JP_BSLH  &kp LC(UP_ARROW)  &kp LS(NUMBER_2)  &kp F7  &kp F10  &kp BSPC  &kp ENTER  &kp JP_CARET  &kp CAPS  &tog 2  &kp ENTER  &kp LGUI  &kp RGUI  &kp ENTER  &tog 2  &kp LG(C)  &kp LG(V)  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings =
