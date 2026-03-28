@@ -132,7 +132,7 @@
 
             sensor-bindings =
                 <&scroll_left_right SCRL_LEFT SCRL_RIGHT>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
     };
 };
